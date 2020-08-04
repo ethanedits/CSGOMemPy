@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSGOMemPy Module</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="start.html">
+                            <!--<span aria-hidden="true" class="icon_documents_alt icon"></span>-->
+                            <span class="text-highlight">CSGOMem</span><span class="text-bold">py</span>
+                        </a>
+                    </h1>
+
+                </div><!--//branding-->
+
+                <p>A Python package by EthanEDITS</p>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="start.html">Home</a></li>
+                </ol>
+
+                <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+
+			        </form>
+                </div>
+
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title">Guide</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: August 4th, 2020</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">About</h2>
+                                <div class="section-block">
+                                    <p>This is a python module that makes it easy to implement mod features for Counter-Strike: Global Offensive. This module works by reading and writing memory to the process. To visit the Pypi page click <a href="https://pypi.org/project/CSGOMemPy/">here</a>.
+                                    </p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Step One</h3>
+                                    <p>Install the pip package manager.
+                                    </p>
+                                    <h6>Instructions on installing pip are available <a href="https://pip.pypa.io/en/stable/installing/">here</a></h6>
+                                </div><!--//section-block-->
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Step Two</h3>
+                                    <p>Installing CSGOMemPy with Pip.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Installing with pip package manager:</h6>
+                                        <p><code>pip install CSGOMemPy</code></p>
+                                        <h6>or try:</h6>
+                                        <p><code>python -m pip install CSGOMemPy</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Step Three</h3>
+                                    <p>Importing CSGOMemPy into your Python project
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Example</h6>
+                                        <pre><code class="language-python">from CSGOMemPy import *</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Documentation</h2>
+                                    <div class="code-block">
+                                        <h6 id="html">Glow</h6>
+                                        <div class="code-block">
+                                          <h9><u>GlowAll( dll, R, G, B, R, G, B)</u></h6>
+                                            <pre><code class="language-python">from CSGOMemPy import *
+
+def main():
+    glowAll("client.dll", 1, 0, 0, 0, 1, 0)
+
+
+if __name__ == '__main__':
+   main()</code></pre>
+    <p>In our <strong>glowAll()</strong> line we are inputing our client dll string and then 6 RGB (Red, Green, Blue) float values. The first 3 are for the terrorist team and the second 3 are for the counter-terrorist team. For example, in the code above we are setting the terrorist glow to be red and the counter-terrorist glow to be green.</p>
+
+    <h9><u>GlowT( dll, R, G, B )</u></h6>
+      <pre><code class="language-python">from CSGOMemPy import *
+
+def main():
+    glowT("client.dll", 1, 0, 0)
+
+
+if __name__ == '__main__':
+   main()</code></pre>
+<p>In our <strong>glowT()</strong> line we are inputing our client dll string and then 3 RGB float values.These values represent the Red, Green and Blue channels of the terrorist team's glow color.</p>
+</div><!--//section-block-->
+
+<h9><u>GlowCT( dll, R, G, B )</u></h6>
+  <pre><code class="language-python">from CSGOMemPy import *
+
+def main():
+    glowCT("client.dll", 0, 1, 0)
+
+
+if __name__ == '__main__':
+   main()</code></pre>
+<p>In our <strong>glowCT()</strong> line we are inputing our client dll string and then 3 RGB float values.These values represent the Red, Green and Blue channels of the counter-terrorist team's glow color.</p>
+</div><!--//section-block-->
+                                <div id="css" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Triggerbot</h6>
+                                        <p><u>triggerbot( dll )</u></p>
+                                        <pre><code class="language-python">from CSGOMemPy import *
+
+def main():
+    triggerbot("client.dll")
+
+
+if __name__ == '__main__':
+   main()</code></pre>
+<p>For the <strong>triggerbot</strong> function, all we need to do is input the client dll as a string, then it will automatically shoot upon looking at an enemy</p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="sass" class="section-block">
+                                    <div class="code-block">
+                                        <h6>Recoil-Control System</h6>
+                                        <p><u>rcs( dll )</u></p>
+                                        <pre><code class="language-python">from CSGOMemPy import *
+
+def main():
+    rcs("client.dll")
+
+
+  if __name__ == '__main__':
+     main()</code></pre>
+<p>In the rcs function, we need to input our client dll as a string, then there will be no recoil on your guns.</p>
+                                </div><!--//section-block-->
+
+
+                                <h2 class="section-title" id="callouts-section">More Information</h2>
+                                <div class="section-block">
+                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-info-circle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Notice</h4>
+                                            <p>This library is purely for educational purposes. Any use beyond that is in the responsibility of the user.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+
+                                    <!--<div class="callout-block callout-warning">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-bug"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="callout-title">Known-Bugs</h4>
+                                            <p>No Bugs :)</p>
+                                          </div>
+                                    </div> -->
+
+                                    <div class="callout-block callout-success">
+
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Update Releases</h4>
+                                            <p>v1.0.0 - Initial Release</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+
+                                    <div class="callout-block callout-danger">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Current Issues</h4>
+                                            <p>Currently all glow functions are not working. They will be fixed in patch 1.0.1 </p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+                                </div>
+                            </section>
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#download-section">About</a>
+	                                <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                    </nav><!--//nav-->
+	                                <a class="nav-link scrollto" href="#code-section">Documentation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#html">Glow</a>
+                                        <a class="nav-link scrollto" href="#css">Triggerbot</a>
+                                        <a class="nav-link scrollto" href="#sass">Recoil-Control</a>
+                                    </nav><!--//nav-->
+	                                <a class="nav-link scrollto" href="#callouts-section">Other-Info</a>
+	                            </nav><!--//doc-menu-->
+
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Package by EthanEDITS</small>
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
